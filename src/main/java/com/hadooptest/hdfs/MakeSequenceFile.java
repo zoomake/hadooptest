@@ -5,12 +5,14 @@ import org.apache.hadoop.fs.*;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.util.ReflectionUtils;
 import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MakeSequenceFile {
+    private static Logger log = Logger.getLogger(MakeSequenceFile.class);
     //将目标目录的所有文件以文件名为key，内容为value放入SequenceFile中
     //第一个参数是需要打包的目录，第二个参数生成的文件路径和名称
     private static void combineToSequenceFile(String sourceDir, String destFile) throws IOException {
@@ -96,7 +98,6 @@ public class MakeSequenceFile {
 
     //将combineToSequenceFile生成的文件分解成原文件。
     private static void extractCombineSequenceFile( String sourceFile) throws IOException {
-        System.out.println("START:::");
         Configuration conf = new Configuration();
         conf.set("fs.defaultFS", "hdfs://106.14.186.240:8020");
         conf.set("dfs.client.use.datanode.hostname", "true");//重点配置 否则本地调试返回阿里云内网IP
@@ -144,7 +145,6 @@ public class MakeSequenceFile {
         String in = "hdfs://106.14.186.240:8020/hlnumlog/input/";
         String out = "hdfs://106.14.186.240:8020/hlnumlog/output2/";
 //        combineToSequenceFile(in, out);
-
 
         extractCombineSequenceFile(out);
     }

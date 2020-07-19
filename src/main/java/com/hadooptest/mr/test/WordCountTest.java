@@ -1,4 +1,4 @@
-package com.hadooptest.test;
+package com.hadooptest.mr.test;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;

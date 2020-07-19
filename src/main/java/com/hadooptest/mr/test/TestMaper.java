@@ -1,4 +1,4 @@
-package com.hadooptest.test;
+package com.hadooptest.mr.test;
 
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;

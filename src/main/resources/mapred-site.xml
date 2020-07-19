@@ -1,12 +1,12 @@
 <configuration>
     <property>
         <name>mapreduce.framework.name</name>
-        <value>yarn</value>
+        <value>local</value>
     </property>
     <!--跨平台提交代码，也就是在windows下读取环境变量使用%var%,在linux下读取环境变量使用$var，以及其他windows和linux的差别，
     省的去修改YARNRunner.java源码-->
     <property>
         <name>mapreduce.app-submission.cross-platform</name>
-        <value>false</value>
+        <value>true</value>
     </property>
 </configuration>
