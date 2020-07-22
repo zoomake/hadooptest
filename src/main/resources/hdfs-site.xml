@@ -4,7 +4,7 @@
 <configuration xmlns:xi="http://www.w3.org/2001/XInclude">
     <property>
         <name>dfs.namenode.servicerpc-address</name>
-        <value>106.14.136.182:8022</value>
+        <value>###.136.182:8022</value>
     </property>
     <property>
         <name>dfs.https.port</name>
@@ -12,7 +12,7 @@
     </property>
     <property>
         <name>dfs.namenode.http-address</name>
-        <value>106.14.136.182:50070</value>
+        <value>###.136.182:50070</value>
     </property>
     <property>
         <name>dfs.permissions.superusergroup</name>
@@ -60,19 +60,19 @@
     </property>
     <property>
         <name>dfs.datanode.address</name>
-        <value>106.14.186.240:50010</value>
+        <value>###.186.240:50010</value>
     </property>
     <property>
         <name>dfs.datanode.ipc.address</name>
-        <value>106.14.186.240:50020</value>
+        <value>###.186.240:50020</value>
     </property>
     <property>
         <name>dfs.datanode.http.address</name>
-        <value>106.14.186.240:50075</value>
+        <value>###.186.240:50075</value>
     </property>
     <property>
         <name>dfs.datanode.https.address</name>
-        <value>106.14.186.240:50475</value>
+        <value>###.186.240:50475</value>
     </property>
     <property>
         <name>dfs.datanode.data.dir.perm</name>

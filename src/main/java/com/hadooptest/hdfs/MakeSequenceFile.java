@@ -18,7 +18,7 @@ public class MakeSequenceFile {
     private static void combineToSequenceFile(String sourceDir, String destFile) throws IOException {
         //1.创建 Configuration
         Configuration configuration=new Configuration();
-        configuration.set("fs.defaultFS", "hdfs://106.14.186.240:8020");
+        configuration.set("fs.defaultFS", "hdfs://###.186.240:8020");
         configuration.set("dfs.client.use.datanode.hostname", "true");//重点配置 否则本地调试返回阿里云内网IP
         //打印日志
         BasicConfigurator.configure();
@@ -99,7 +99,7 @@ public class MakeSequenceFile {
     //将combineToSequenceFile生成的文件分解成原文件。
     private static void extractCombineSequenceFile( String sourceFile) throws IOException {
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS", "hdfs://106.14.186.240:8020");
+        conf.set("fs.defaultFS", "hdfs://###.186.240:8020");
         conf.set("dfs.client.use.datanode.hostname", "true");//重点配置 否则本地调试返回阿里云内网IP
         //打印日志
         BasicConfigurator.configure();
@@ -142,8 +142,8 @@ public class MakeSequenceFile {
     }
 
     public static void main(String[] args) throws IOException {
-        String in = "hdfs://106.14.186.240:8020/hlnumlog/input/";
-        String out = "hdfs://106.14.186.240:8020/hlnumlog/output2/";
+        String in = "hdfs://###.186.240:8020/hlnumlog/input/";
+        String out = "hdfs://###.186.240:8020/hlnumlog/output2/";
 //        combineToSequenceFile(in, out);
 
         extractCombineSequenceFile(out);

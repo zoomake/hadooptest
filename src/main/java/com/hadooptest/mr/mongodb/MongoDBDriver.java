@@ -30,9 +30,9 @@ public class MongoDBDriver {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
 
-        conf.set("fs.defaultFS", "hdfs://106.14.186.240:8020");
+        conf.set("fs.defaultFS", "hdfs://###.186.240:8020");
         conf.set("dfs.client.use.datanode.hostname", "true");
-        Path outputPath = new Path("hdfs://106.14.186.240:8020/mongo/");
+        Path outputPath = new Path("hdfs://###.186.240:8020/mongo/");
         FileSystem fs = FileSystem.get(conf);
         if (fs.exists(outputPath)) {
             fs.delete(outputPath, true);
